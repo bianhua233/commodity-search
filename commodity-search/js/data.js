@@ -1,0 +1,882 @@
+/**
+ * 商品查询网站 - 模拟数据
+ * 涵盖手机、数码、家电、日用等多品类
+ */
+
+const PRODUCTS = [
+  // ===== 手机 =====
+  {
+    id: 'P10001',
+    name: 'iPhone 16 Pro Max 256GB',
+    brand: 'Apple',
+    category: '手机',
+    subCategory: '智能手机',
+    price: 9999,
+    originalPrice: 10999,
+    discount: 9,
+    stock: 128,
+    rating: 4.9,
+    sales: 25680,
+    tags: ['新品', '热销', '正品保障'],
+    image: 'https://picsum.photos/seed/iphone16pro/400/400',
+    description: '搭载 A18 Pro 芯片，6.9 英寸超视网膜 XDR 显示屏，钛金属设计，4800 万像素主摄系统，支持 Apple Intelligence。',
+    specs: {
+      '屏幕尺寸': '6.9 英寸',
+      '处理器': 'A18 Pro',
+      '运行内存': '8GB',
+      '存储容量': '256GB',
+      '后置摄像头': '4800万像素主摄+1200万超广角+1200万长焦',
+      '前置摄像头': '1200万像素',
+      '电池容量': '4685mAh',
+      '操作系统': 'iOS 18',
+      '重量': '227g',
+      '颜色': '原色钛金属/白色钛金属/黑色钛金属/沙漠色钛金属'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计2-3天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 10999 },
+      { date: '2026-06-17', price: 10999 },
+      { date: '2026-06-24', price: 10599 },
+      { date: '2026-07-01', price: 9999 },
+      { date: '2026-07-08', price: 9999 }
+    ]
+  },
+  {
+    id: 'P10002',
+    name: 'iPhone 16 Pro 128GB',
+    brand: 'Apple',
+    category: '手机',
+    subCategory: '智能手机',
+    price: 8499,
+    originalPrice: 8999,
+    discount: 9.4,
+    stock: 256,
+    rating: 4.8,
+    sales: 38920,
+    tags: ['热销', '正品保障'],
+    image: 'https://picsum.photos/seed/iphone16pro128/400/400',
+    description: 'A18 Pro 芯片，6.3 英寸超视网膜 XDR 显示屏，钛金属设计，专业级摄像头系统。',
+    specs: {
+      '屏幕尺寸': '6.3 英寸',
+      '处理器': 'A18 Pro',
+      '运行内存': '8GB',
+      '存储容量': '128GB',
+      '后置摄像头': '4800万像素主摄+1200万超广角+1200万长焦',
+      '前置摄像头': '1200万像素',
+      '电池容量': '3582mAh',
+      '操作系统': 'iOS 18',
+      '重量': '199g',
+      '颜色': '原色钛金属/白色钛金属/黑色钛金属/沙漠色钛金属'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计2-3天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 8999 },
+      { date: '2026-06-17', price: 8999 },
+      { date: '2026-06-24', price: 8699 },
+      { date: '2026-07-01', price: 8499 },
+      { date: '2026-07-08', price: 8499 }
+    ]
+  },
+  {
+    id: 'P10003',
+    name: 'iPhone 16 Plus 256GB',
+    brand: 'Apple',
+    category: '手机',
+    subCategory: '智能手机',
+    price: 6999,
+    originalPrice: 7999,
+    discount: 8.7,
+    stock: 85,
+    rating: 4.7,
+    sales: 15230,
+    tags: ['特价', '包邮'],
+    image: 'https://picsum.photos/seed/iphone16plus/400/400',
+    description: 'A18 芯片，6.7 英寸超视网膜 XDR 显示屏，铝金属设计，双摄系统。',
+    specs: {
+      '屏幕尺寸': '6.7 英寸',
+      '处理器': 'A18',
+      '运行内存': '8GB',
+      '存储容量': '256GB',
+      '后置摄像头': '4800万像素主摄+1200万超广角',
+      '前置摄像头': '1200万像素',
+      '电池容量': '4674mAh',
+      '操作系统': 'iOS 18',
+      '重量': '207g',
+      '颜色': '黑色/白色/粉色/浅绿/浅蓝'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计2-3天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 7999 },
+      { date: '2026-06-17', price: 7999 },
+      { date: '2026-06-24', price: 7499 },
+      { date: '2026-07-01', price: 6999 },
+      { date: '2026-07-08', price: 6999 }
+    ]
+  },
+  {
+    id: 'P10004',
+    name: 'iPhone 16 128GB',
+    brand: 'Apple',
+    category: '手机',
+    subCategory: '智能手机',
+    price: 5999,
+    originalPrice: 6999,
+    discount: 8.6,
+    stock: 420,
+    rating: 4.7,
+    sales: 52100,
+    tags: ['特价', '热销', '正品保障'],
+    image: 'https://picsum.photos/seed/iphone16/400/400',
+    description: 'A18 芯片，6.1 英寸超视网膜 XDR 显示屏，铝金属设计，4800万像素双摄系统。',
+    specs: {
+      '屏幕尺寸': '6.1 英寸',
+      '处理器': 'A18',
+      '运行内存': '8GB',
+      '存储容量': '128GB',
+      '后置摄像头': '4800万像素主摄+1200万超广角',
+      '前置摄像头': '1200万像素',
+      '电池容量': '3561mAh',
+      '操作系统': 'iOS 18',
+      '重量': '170g',
+      '颜色': '黑色/白色/粉色/浅绿/浅蓝'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计2-3天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 6999 },
+      { date: '2026-06-17', price: 6999 },
+      { date: '2026-06-24', price: 6499 },
+      { date: '2026-07-01', price: 5999 },
+      { date: '2026-07-08', price: 5999 }
+    ]
+  },
+  {
+    id: 'P10005',
+    name: 'iPhone 15 Pro Max 256GB',
+    brand: 'Apple',
+    category: '手机',
+    subCategory: '智能手机',
+    price: 7999,
+    originalPrice: 9999,
+    discount: 8,
+    stock: 56,
+    rating: 4.8,
+    sales: 89200,
+    tags: ['特价', '热销', '包邮'],
+    image: 'https://picsum.photos/seed/iphone15promax/400/400',
+    description: 'A17 Pro 芯片，6.7 英寸超视网膜 XDR 显示屏，钛金属设计，专业级三摄系统。',
+    specs: {
+      '屏幕尺寸': '6.7 英寸',
+      '处理器': 'A17 Pro',
+      '运行内存': '8GB',
+      '存储容量': '256GB',
+      '后置摄像头': '4800万像素主摄+1200万超广角+1200万长焦',
+      '前置摄像头': '1200万像素',
+      '电池容量': '4422mAh',
+      '操作系统': 'iOS 17',
+      '重量': '221g',
+      '颜色': '原色钛金属/蓝色钛金属/白色钛金属/黑色钛金属'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计2-3天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 8999 },
+      { date: '2026-06-17', price: 8499 },
+      { date: '2026-06-24', price: 8299 },
+      { date: '2026-07-01', price: 7999 },
+      { date: '2026-07-08', price: 7999 }
+    ]
+  },
+  {
+    id: 'P10006',
+    name: 'Samsung Galaxy S25 Ultra 512GB',
+    brand: 'Samsung',
+    category: '手机',
+    subCategory: '智能手机',
+    price: 8999,
+    originalPrice: 9999,
+    discount: 9,
+    stock: 73,
+    rating: 4.7,
+    sales: 12400,
+    tags: ['新品', '热销'],
+    image: 'https://picsum.photos/seed/s25ultra/400/400',
+    description: '骁龙 8 Elite 芯片，6.9 英寸 Dynamic AMOLED 2X 显示屏，2亿像素四摄系统，内置 S Pen。',
+    specs: {
+      '屏幕尺寸': '6.9 英寸',
+      '处理器': '骁龙 8 Elite',
+      '运行内存': '12GB',
+      '存储容量': '512GB',
+      '后置摄像头': '2亿像素主摄+1200万超广角+5000万长焦+5000万超长焦',
+      '前置摄像头': '1200万像素',
+      '电池容量': '5000mAh',
+      '操作系统': 'One UI 7 (Android 15)',
+      '重量': '219g',
+      '颜色': '钛灰色/钛黑色/钛白色/钛绿色'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计2-3天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 9999 },
+      { date: '2026-06-17', price: 9999 },
+      { date: '2026-06-24', price: 9499 },
+      { date: '2026-07-01', price: 8999 },
+      { date: '2026-07-08', price: 8999 }
+    ]
+  },
+  {
+    id: 'P10007',
+    name: 'Xiaomi 15 Pro 512GB',
+    brand: '小米',
+    category: '手机',
+    subCategory: '智能手机',
+    price: 4999,
+    originalPrice: 5499,
+    discount: 9.1,
+    stock: 320,
+    rating: 4.6,
+    sales: 45800,
+    tags: ['热销', '正品保障', '包邮'],
+    image: 'https://picsum.photos/seed/xiaomi15pro/400/400',
+    description: '骁龙 8 Elite 芯片，6.73 英寸 2K AMOLED 屏，徕卡三摄，5400mAh 大电池。',
+    specs: {
+      '屏幕尺寸': '6.73 英寸',
+      '处理器': '骁龙 8 Elite',
+      '运行内存': '12GB',
+      '存储容量': '512GB',
+      '后置摄像头': '5000万像素徕卡主摄+5000万超广角+5000万长焦',
+      '前置摄像头': '3200万像素',
+      '电池容量': '5400mAh',
+      '操作系统': 'HyperOS 2 (Android 15)',
+      '重量': '213g',
+      '颜色': '黑色/白色/绿色/亮银'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计1-2天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 5499 },
+      { date: '2026-06-17', price: 5499 },
+      { date: '2026-06-24', price: 5299 },
+      { date: '2026-07-01', price: 4999 },
+      { date: '2026-07-08', price: 4999 }
+    ]
+  },
+  {
+    id: 'P10008',
+    name: 'Huawei Pura 80 Pro 512GB',
+    brand: '华为',
+    category: '手机',
+    subCategory: '智能手机',
+    price: 6999,
+    originalPrice: 7999,
+    discount: 8.7,
+    stock: 45,
+    rating: 4.8,
+    sales: 32100,
+    tags: ['新品', '热销', '正品保障'],
+    image: 'https://picsum.photos/seed/pura80pro/400/400',
+    description: '麒麟 9100 芯片，6.8 英寸 OLED 屏，XMAGE 四摄系统，卫星通信，鸿蒙系统。',
+    specs: {
+      '屏幕尺寸': '6.8 英寸',
+      '处理器': '麒麟 9100',
+      '运行内存': '12GB',
+      '存储容量': '512GB',
+      '后置摄像头': '5000万像素XMAGE主摄+4000万超广角+5000万长焦+1500万微距',
+      '前置摄像头': '1300万像素',
+      '电池容量': '5050mAh',
+      '操作系统': 'HarmonyOS 5',
+      '重量': '209g',
+      '颜色': '陶瓷白/陶瓷黑/罗兰紫/雅丹灰'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计3-5天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 7999 },
+      { date: '2026-06-17', price: 7999 },
+      { date: '2026-06-24', price: 7499 },
+      { date: '2026-07-01', price: 6999 },
+      { date: '2026-07-08', price: 6999 }
+    ]
+  },
+  // ===== 平板电脑 =====
+  {
+    id: 'P10009',
+    name: 'iPad Pro M4 13英寸 256GB',
+    brand: 'Apple',
+    category: '平板电脑',
+    subCategory: '高端平板',
+    price: 8499,
+    originalPrice: 8999,
+    discount: 9.4,
+    stock: 92,
+    rating: 4.9,
+    sales: 18900,
+    tags: ['新品', '热销', '正品保障'],
+    image: 'https://picsum.photos/seed/ipadprom4/400/400',
+    description: 'M4 芯片，13 英寸 Ultra Retina XDR 显示屏，超薄设计，支持 Apple Pencil Pro。',
+    specs: {
+      '屏幕尺寸': '13 英寸',
+      '处理器': 'Apple M4',
+      '运行内存': '16GB',
+      '存储容量': '256GB',
+      '后置摄像头': '1200万像素广角+1200万超广角',
+      '前置摄像头': '1200万像素',
+      '电池容量': '约10小时续航',
+      '操作系统': 'iPadOS 18',
+      '重量': '579g',
+      '颜色': '银色/深空黑色'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计2-3天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 8999 },
+      { date: '2026-06-17', price: 8999 },
+      { date: '2026-06-24', price: 8799 },
+      { date: '2026-07-01', price: 8499 },
+      { date: '2026-07-08', price: 8499 }
+    ]
+  },
+  {
+    id: 'P10010',
+    name: 'iPad Air M3 11英寸 128GB',
+    brand: 'Apple',
+    category: '平板电脑',
+    subCategory: '中端平板',
+    price: 4499,
+    originalPrice: 4799,
+    discount: 9.4,
+    stock: 180,
+    rating: 4.7,
+    sales: 31500,
+    tags: ['热销', '包邮'],
+    image: 'https://picsum.photos/seed/ipadairm3/400/400',
+    description: 'M3 芯片，11 英寸 Liquid Retina 显示屏，轻薄便携，完美平衡性能与价格。',
+    specs: {
+      '屏幕尺寸': '11 英寸',
+      '处理器': 'Apple M3',
+      '运行内存': '8GB',
+      '存储容量': '128GB',
+      '后置摄像头': '1200万像素',
+      '前置摄像头': '1200万像素',
+      '电池容量': '约10小时续航',
+      '操作系统': 'iPadOS 18',
+      '重量': '462g',
+      '颜色': '蓝色/紫色/星光色/深空灰色'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计2-3天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 4799 },
+      { date: '2026-06-17', price: 4799 },
+      { date: '2026-06-24', price: 4599 },
+      { date: '2026-07-01', price: 4499 },
+      { date: '2026-07-08', price: 4499 }
+    ]
+  },
+  // ===== 笔记本电脑 =====
+  {
+    id: 'P10011',
+    name: 'MacBook Pro 14英寸 M4 Pro 512GB',
+    brand: 'Apple',
+    category: '笔记本电脑',
+    subCategory: '高端笔记本',
+    price: 14999,
+    originalPrice: 15999,
+    discount: 9.4,
+    stock: 37,
+    rating: 4.9,
+    sales: 12300,
+    tags: ['新品', '热销', '正品保障'],
+    image: 'https://picsum.photos/seed/macbookpro14/400/400',
+    description: 'M4 Pro 芯片，14.2 英寸 Liquid Retina XDR 显示屏，Liquid Retina XDR 显示屏，最长22小时续航。',
+    specs: {
+      '屏幕尺寸': '14.2 英寸',
+      '处理器': 'Apple M4 Pro',
+      '运行内存': '18GB',
+      '存储容量': '512GB',
+      '显卡': '集成 16核 GPU',
+      '电池容量': '最长22小时续航',
+      '操作系统': 'macOS 15',
+      '重量': '1.6kg',
+      '接口': 'HDMI/Thunderbolt 5/SDXC/MagSafe 3'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计3-5天送达',
+    returnPolicy: '14天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 15999 },
+      { date: '2026-06-17', price: 15999 },
+      { date: '2026-06-24', price: 15499 },
+      { date: '2026-07-01', price: 14999 },
+      { date: '2026-07-08', price: 14999 }
+    ]
+  },
+  {
+    id: 'P10012',
+    name: 'MacBook Air M4 13英寸 256GB',
+    brand: 'Apple',
+    category: '笔记本电脑',
+    subCategory: '轻薄本',
+    price: 7999,
+    originalPrice: 8499,
+    discount: 9.4,
+    stock: 210,
+    rating: 4.8,
+    sales: 45600,
+    tags: ['热销', '包邮', '正品保障'],
+    image: 'https://picsum.photos/seed/macbookairm4/400/400',
+    description: 'M4 芯片，13.6 英寸 Liquid Retina 显示屏，超轻薄设计，静音无风扇。',
+    specs: {
+      '屏幕尺寸': '13.6 英寸',
+      '处理器': 'Apple M4',
+      '运行内存': '16GB',
+      '存储容量': '256GB',
+      '显卡': '集成 10核 GPU',
+      '电池容量': '最长18小时续航',
+      '操作系统': 'macOS 15',
+      '重量': '1.24kg',
+      '颜色': '午夜色/星光色/深空灰色/银色'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计2-3天送达',
+    returnPolicy: '14天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 8499 },
+      { date: '2026-06-17', price: 8499 },
+      { date: '2026-06-24', price: 8299 },
+      { date: '2026-07-01', price: 7999 },
+      { date: '2026-07-08', price: 7999 }
+    ]
+  },
+  // ===== 耳机 =====
+  {
+    id: 'P10013',
+    name: 'AirPods Pro 3',
+    brand: 'Apple',
+    category: '耳机',
+    subCategory: '真无线耳机',
+    price: 1799,
+    originalPrice: 1999,
+    discount: 9,
+    stock: 530,
+    rating: 4.8,
+    sales: 78900,
+    tags: ['新品', '热销', '正品保障'],
+    image: 'https://picsum.photos/seed/airpodspro3/400/400',
+    description: '全新 H3 芯片，自适应降噪，个性化空间音频，USB-C 充电盒，最长6小时聆听。',
+    specs: {
+      '类型': '入耳式真无线',
+      '芯片': 'Apple H3',
+      '降噪': '自适应主动降噪',
+      '防水等级': 'IPX5',
+      '电池续航': '6小时（单次）/ 30小时（含充电盒）',
+      '连接方式': '蓝牙 5.4',
+      '重量': '4.7g（单只）',
+      '颜色': '白色'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计1-2天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 1999 },
+      { date: '2026-06-17', price: 1999 },
+      { date: '2026-06-24', price: 1899 },
+      { date: '2026-07-01', price: 1799 },
+      { date: '2026-07-08', price: 1799 }
+    ]
+  },
+  {
+    id: 'P10014',
+    name: 'Samsung Galaxy Buds3 Pro',
+    brand: 'Samsung',
+    category: '耳机',
+    subCategory: '真无线耳机',
+    price: 1399,
+    originalPrice: 1599,
+    discount: 8.7,
+    stock: 245,
+    rating: 4.5,
+    sales: 23400,
+    tags: ['特价', '正品保障'],
+    image: 'https://picsum.photos/seed/galaxybuds3/400/400',
+    description: '智能降噪，双倍放大声音，360°空间音频，配合 Galaxy 生态使用体验更佳。',
+    specs: {
+      '类型': '入耳式真无线',
+      '芯片': 'Samsung 定制芯片',
+      '降噪': '智能主动降噪',
+      '防水等级': 'IP57',
+      '电池续航': '7小时（单次）/ 34小时（含充电盒）',
+      '连接方式': '蓝牙 5.4',
+      '重量': '5.4g（单只）',
+      '颜色': '白色/银色'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计2-3天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 1599 },
+      { date: '2026-06-17', price: 1599 },
+      { date: '2026-06-24', price: 1499 },
+      { date: '2026-07-01', price: 1399 },
+      { date: '2026-07-08', price: 1399 }
+    ]
+  },
+  // ===== 智能手表 =====
+  {
+    id: 'P10015',
+    name: 'Apple Watch Ultra 3 49mm',
+    brand: 'Apple',
+    category: '智能手表',
+    subCategory: '户外智能表',
+    price: 5999,
+    originalPrice: 6499,
+    discount: 9.2,
+    stock: 41,
+    rating: 4.8,
+    sales: 8900,
+    tags: ['新品', '正品保障'],
+    image: 'https://picsum.photos/seed/awultra3/400/400',
+    description: 'S10 SiP 芯片，49mm 钛金属表壳，3000nit 亮度，双频GPS，潜水40米。',
+    specs: {
+      '表盘尺寸': '49mm',
+      '芯片': 'Apple S10 SiP',
+      '屏幕亮度': '3000nit',
+      '防水等级': 'WR100 / EN13319',
+      '续航': '最长36小时（正常）/ 72小时（低功耗）',
+      '传感器': '心率/血氧/体温/深度/水温',
+      '定位': '双频 L1+L5 GPS',
+      '重量': '61.4g（不含表带）'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计2-3天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 6499 },
+      { date: '2026-06-17', price: 6499 },
+      { date: '2026-06-24', price: 6299 },
+      { date: '2026-07-01', price: 5999 },
+      { date: '2026-07-08', price: 5999 }
+    ]
+  },
+  {
+    id: 'P10016',
+    name: 'Apple Watch Series 10 45mm',
+    brand: 'Apple',
+    category: '智能手表',
+    subCategory: '智能健康表',
+    price: 3199,
+    originalPrice: 3499,
+    discount: 9.1,
+    stock: 180,
+    rating: 4.7,
+    sales: 56200,
+    tags: ['热销', '包邮'],
+    image: 'https://picsum.photos/seed/aws10/400/400',
+    description: 'S10 SiP 芯片，45mm 铝金属表壳，全天候视网膜屏，睡眠呼吸暂停检测。',
+    specs: {
+      '表盘尺寸': '45mm',
+      '芯片': 'Apple S10 SiP',
+      '屏幕': '全天候视网膜 LTPO3 OLED',
+      '防水等级': 'WR50',
+      '续航': '最长18小时',
+      '传感器': '心率/血氧/体温/加速度计/陀螺仪',
+      '定位': 'L1 GPS',
+      '重量': '36.4g（不含表带）'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计1-2天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 3499 },
+      { date: '2026-06-17', price: 3499 },
+      { date: '2026-06-24', price: 3399 },
+      { date: '2026-07-01', price: 3199 },
+      { date: '2026-07-08', price: 3199 }
+    ]
+  },
+  // ===== 家电 =====
+  {
+    id: 'P10017',
+    name: '戴森 V15 Detect 无绳吸尘器',
+    brand: '戴森',
+    category: '家电',
+    subCategory: '吸尘器',
+    price: 4290,
+    originalPrice: 4990,
+    discount: 8.6,
+    stock: 67,
+    rating: 4.6,
+    sales: 28700,
+    tags: ['热销', '正品保障'],
+    image: 'https://picsum.photos/seed/dysonv15/400/400',
+    description: '激光探测技术，压电传感器实时显示吸入颗粒，240AW 强劲吸力，整机HEPA过滤。',
+    specs: {
+      '类型': '无绳手持吸尘器',
+      '吸力': '240AW',
+      '续航': '最长60分钟',
+      '尘杯容量': '0.76L',
+      '过滤系统': '整机 HEPA 过滤',
+      '重量': '2.76kg',
+      '配件': '激光纤毛刷头/防缠绕刷头/缝隙吸头等',
+      '颜色': '金色/蓝色'
+    },
+    warranty: '全国联保两年',
+    delivery: '预计3-5天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 4990 },
+      { date: '2026-06-17', price: 4890 },
+      { date: '2026-06-24', price: 4590 },
+      { date: '2026-07-01', price: 4290 },
+      { date: '2026-07-08', price: 4290 }
+    ]
+  },
+  {
+    id: 'P10018',
+    name: '美的 1.5匹 新一级能效空调 KFR-35GW',
+    brand: '美的',
+    category: '家电',
+    subCategory: '空调',
+    price: 2999,
+    originalPrice: 3599,
+    discount: 8.3,
+    stock: 150,
+    rating: 4.5,
+    sales: 67300,
+    tags: ['特价', '热销', '包邮'],
+    image: 'https://picsum.photos/seed/mideaac/400/400',
+    description: '新一级能效，全直流变频，智能WiFi控制，自清洁，56℃高温除菌。',
+    specs: {
+      '匹数': '1.5匹',
+      '能效等级': '新一级能效',
+      '变频/定频': '全直流变频',
+      '制冷量': '3500W',
+      '制热量': '4900W',
+      '循环风量': '660m³/h',
+      '噪音': '18-42dB',
+      '重量': '11.5kg（内机）/ 28kg（外机）'
+    },
+    warranty: '整机保修六年',
+    delivery: '预计次日送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 3599 },
+      { date: '2026-06-17', price: 3499 },
+      { date: '2026-06-24', price: 3199 },
+      { date: '2026-07-01', price: 2999 },
+      { date: '2026-07-08', price: 2999 }
+    ]
+  },
+  // ===== 日用百货 =====
+  {
+    id: 'P10019',
+    name: '小米空气净化器 5 Pro',
+    brand: '小米',
+    category: '日用百货',
+    subCategory: '空气净化',
+    price: 1999,
+    originalPrice: 2499,
+    discount: 8,
+    stock: 290,
+    rating: 4.6,
+    sales: 41200,
+    tags: ['特价', '热销', '包邮'],
+    image: 'https://picsum.photos/seed/miair5pro/400/400',
+    description: 'CADR值 700m³/h，OLED 触控屏，米家智能联动，三合一滤芯，高效去除PM2.5。',
+    specs: {
+      '适用面积': '48-84㎡',
+      '颗粒物CADR': '700m³/h',
+      '甲醛CADR': '400m³/h',
+      '噪音': '32-65dB',
+      '额定功率': '45W',
+      '重量': '18kg',
+      '滤芯寿命': '12-18个月',
+      '连接方式': 'WiFi / 蓝牙'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计2-3天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 2499 },
+      { date: '2026-06-17', price: 2399 },
+      { date: '2026-06-24', price: 2199 },
+      { date: '2026-07-01', price: 1999 },
+      { date: '2026-07-08', price: 1999 }
+    ]
+  },
+  {
+    id: 'P10020',
+    name: '日本进口 虎牌保温杯 500ml',
+    brand: '虎牌',
+    category: '日用百货',
+    subCategory: '保温杯',
+    price: 299,
+    originalPrice: 359,
+    discount: 8.3,
+    stock: 800,
+    rating: 4.7,
+    sales: 92500,
+    tags: ['热销', '正品保障', '包邮'],
+    image: 'https://picsum.photos/seed/tigerbottle/400/400',
+    description: '日本原装进口，不锈钢真空双层结构，保温保冷两用，食品级304不锈钢。',
+    specs: {
+      '容量': '500ml',
+      '材质': '304不锈钢 / 聚丙烯',
+      '保温效果': '6小时保持 70°C以上',
+      '保冷效果': '6小时保持 10°C以下',
+      '重量': '约245g',
+      '颜色': '不锈钢色/红色/黑色/蓝色',
+      '产地': '日本'
+    },
+    warranty: '全国联保一年',
+    delivery: '预计2-3天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 359 },
+      { date: '2026-06-17', price: 339 },
+      { date: '2026-06-24', price: 319 },
+      { date: '2026-07-01', price: 299 },
+      { date: '2026-07-08', price: 299 }
+    ]
+  },
+  // ===== 食品生鲜 =====
+  {
+    id: 'P10021',
+    name: '智利进口车厘子 JJ级 2kg装',
+    brand: '鲜果坊',
+    category: '食品生鲜',
+    subCategory: '进口水果',
+    price: 249,
+    originalPrice: 329,
+    discount: 7.6,
+    stock: 1200,
+    rating: 4.5,
+    sales: 152300,
+    tags: ['特价', '热销', '包邮'],
+    image: 'https://picsum.photos/seed/cherry/400/400',
+    description: '智利进口JJ级车厘子，果径28-30mm，新鲜空运到港，冷链配送。',
+    specs: {
+      '规格': 'JJ级（果径28-30mm）',
+      '净重': '2kg',
+      '产地': '智利',
+      '保质期': '冷藏7-10天',
+      '包装方式': '真空包装+冰袋+保温箱',
+      '配送方式': '顺丰冷链'
+    },
+    warranty: '生鲜品类不支持7天退换',
+    delivery: '次日达（限冷链覆盖区域）',
+    returnPolicy: '坏果包赔，24小时内反馈',
+    priceHistory: [
+      { date: '2026-06-10', price: 329 },
+      { date: '2026-06-17', price: 299 },
+      { date: '2026-06-24', price: 279 },
+      { date: '2026-07-01', price: 249 },
+      { date: '2026-07-08', price: 249 }
+    ]
+  },
+  // ===== 服饰鞋帽 =====
+  {
+    id: 'P10022',
+    name: 'Nike Air Force 1 经典款 运动鞋',
+    brand: 'Nike',
+    category: '服饰鞋帽',
+    subCategory: '运动鞋',
+    price: 799,
+    originalPrice: 999,
+    discount: 8,
+    stock: 560,
+    rating: 4.7,
+    sales: 128900,
+    tags: ['热销', '正品保障', '包邮'],
+    image: 'https://picsum.photos/seed/nikeaf1/400/400',
+    description: '经典 Air Force 1 运动鞋，纯白配色，皮革鞋面，气垫缓震，百搭潮流单品。',
+    specs: {
+      '品牌': 'Nike',
+      '款式': 'Air Force 1 \'07',
+      '材质': '皮革/织物',
+      '闭合方式': '系带',
+      '鞋底': '橡胶外底+Air气垫',
+      '功能': '缓震/耐磨/防滑',
+      '适用场景': '休闲/运动/潮流搭配'
+    },
+    warranty: '质保一个月',
+    delivery: '预计3-5天送达',
+    returnPolicy: '7天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 999 },
+      { date: '2026-06-17', price: 949 },
+      { date: '2026-06-24', price: 899 },
+      { date: '2026-07-01', price: 799 },
+      { date: '2026-07-08', price: 799 }
+    ]
+  },
+  {
+    id: 'P10023',
+    name: '优衣库 男士轻薄羽绒服 连帽款',
+    brand: '优衣库',
+    category: '服饰鞋帽',
+    subCategory: '外套',
+    price: 599,
+    originalPrice: 699,
+    discount: 8.6,
+    stock: 920,
+    rating: 4.5,
+    sales: 76500,
+    tags: ['热销', '包邮'],
+    image: 'https://picsum.photos/seed/uniqlojacket/400/400',
+    description: '90%鸭绒填充，轻量便携，连帽设计，可收纳至口袋，男女同款。',
+    specs: {
+      '品牌': '优衣库',
+      '填充物': '90%鸭绒',
+      '面料': '涤纶防撕裂',
+      '款式': '连帽款',
+      '版型': '标准版型',
+      '颜色': '黑色/藏青/灰色/米色',
+      '适用性别': '男女通用'
+    },
+    warranty: '质保一个月',
+    delivery: '预计2-4天送达',
+    returnPolicy: '30天无理由退换货',
+    priceHistory: [
+      { date: '2026-06-10', price: 699 },
+      { date: '2026-06-17', price: 699 },
+      { date: '2026-06-24', price: 649 },
+      { date: '2026-07-01', price: 599 },
+      { date: '2026-07-08', price: 599 }
+    ]
+  }
+];
+
+// 热门搜索词
+const HOT_SEARCHES = [
+  'iPhone 16', 'MacBook', 'AirPods', 'iPad', '华为手机',
+  '小米15', '戴森吸尘器', '运动鞋', '保温杯', '车厘子'
+];
+
+// 获取所有分类
+function getAllCategories() {
+  return [...new Set(PRODUCTS.map(p => p.category))];
+}
+
+// 获取某分类下的品牌
+function getBrandsByCategory(category) {
+  return [...new Set(PRODUCTS.filter(p => p.category === category).map(p => p.brand))];
+}
+
+// 获取所有品牌
+function getAllBrands() {
+  return [...new Set(PRODUCTS.map(p => p.brand))];
+}
